@@ -35,25 +35,25 @@ return [
     'types'     => [
         '1' => [
             'showitem' => '
-            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general, 
+            --div--;LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tab.general, 
                 --palette--;;name,
                 title,
                 gender,
                 description,
                 portrait,
-            --div--;Kontakt,
+            --div--;LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tab.contact,
                 --palette--;;contact_web,
                 --palette--;;contact_phone,
                 fax,
-            --div--;Adresse und Organisation,   
+            --div--;LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tab.location,   
                 --palette--;;role,
                 --palette--;;address,
                 --palette--;;latLon,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, --palette--;;timeRestriction'
         ],
     ],
-
     'columns'   => [
+        // System
         'hidden' => [
             'exclude' => true,
             'label'   => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled',

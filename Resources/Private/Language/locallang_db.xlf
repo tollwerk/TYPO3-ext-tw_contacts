@@ -5,7 +5,7 @@
         <body>
             <!-- Basic settings -->
             <trans-unit id="file" xml:space="preserve">
-				<source>Files &amp; directories</source>
+				<source>Files and directories</source>
 			</trans-unit>
             <trans-unit id="file.templateRootPath" xml:space="preserve">
 				<source>Path to template files (FE)</source>
@@ -16,6 +16,17 @@
             <trans-unit id="file.layoutRootPath" xml:space="preserve">
 				<source>Path to template layouts (FE)</source>
 			</trans-unit>
+
+            <!-- Tabs -->
+            <trans-unit id="tab.general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="tab.contact">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="tab.location">
+                <source>Location</source>
+            </trans-unit>
 
             <!-- Contacts -->
             <trans-unit id="contacts">
