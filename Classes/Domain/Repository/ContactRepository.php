@@ -1,6 +1,6 @@
 <?php
 /**
- * Contact
+ * ContactRepository
  *
  * @category   Tollwerk
  * @package    Tollwerk\TwContacts
