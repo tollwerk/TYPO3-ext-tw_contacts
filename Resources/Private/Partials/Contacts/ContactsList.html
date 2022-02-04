@@ -1,0 +1,14 @@
+<f:if condition="{contacts}">
+    <f:then>
+        <ol class="ContactsList">
+            <f:for each="{contacts}" as="contact">
+                <li class="ContactsList__item">
+                    {contact.givenName} {contact.familyName}
+                </li>
+            </f:for>
+        </ol>
+    </f:then>
+    <f:else>
+        <p>{f:translate(key: 'contactsList.empty')}</p>
+    </f:else>
+</f:if>

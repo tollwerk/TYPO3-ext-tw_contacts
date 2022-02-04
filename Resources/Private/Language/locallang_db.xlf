@@ -28,10 +28,12 @@
                 <source>Location</source>
             </trans-unit>
 
+            <!-- Plugins -->
+            <plugin class="contacts">
+                <source>Tollwerk Contacts</source>
+            </plugin>
+
             <!-- Contacts -->
-            <trans-unit id="contacts">
-                <source>Contacts</source>
-            </trans-unit>
             <trans-unit id="list_type.contacts">
                 <source>Contact list</source>
             </trans-unit>
@@ -64,6 +66,9 @@
             </trans-unit>
             <trans-unit id="tx_twcontacts_domain_model_contact.gender.2" approved="no">
                 <source>Female</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.gender.3" approved="no">
+                <source>Diverse</source>
             </trans-unit>
             <trans-unit id="tx_twcontacts_domain_model_contact.portrait" approved="yes">
                 <source>Portrait</source>

@@ -98,19 +98,18 @@ return [
                 'renderType' => 'selectSingle',
                 'items'      => [
                     ['', 0],
-                    // TODO: Fix TYPO3 error "class not found"
-                    //[
-                    //    'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.gender.' . \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_MALE,
-                    //    \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_MALE
-                    //],
-                    //[
-                    //    'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.gender.' . \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_FEMALE,
-                    //    \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_FEMALE,
-                    //],
-                    //[
-                    //    'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.gender.' . \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_DIVERSE,
-                    //    \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_DIVERSE,
-                    //],
+                    [
+                        'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.gender.' . \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_MALE,
+                        \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_MALE
+                    ],
+                    [
+                        'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.gender.' . \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_FEMALE,
+                        \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_FEMALE,
+                    ],
+                    [
+                        'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.gender.' . \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_DIVERSE,
+                        \Tollwerk\TwContacts\Domain\Model\Contact::GENDER_DIVERSE,
+                    ],
                 ],
             ],
         ],
@@ -298,7 +297,8 @@ return [
             'config'      => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'null,trim'
+                'eval' => 'null,trim',
+                'default' => null,
             ],
         ],
         'longitude'   => [
@@ -308,7 +308,8 @@ return [
             'config'      => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'null,trim'
+                'eval' => 'null,trim',
+                'default' => null,
             ],
         ],
         'distance'    => [

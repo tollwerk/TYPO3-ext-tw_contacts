@@ -1,0 +1,10 @@
+plugin.tx_twcontacts {
+    view {
+        # cat=plugin.tw_contacts/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:tw_contacts/Resources/Private/Templates/
+        # cat=plugin.tw_contacts/file; type=string; label=Path to partial root (FE)
+        partialRootPath = EXT:tw_contacts/Resources/Private/Partials/
+        # cat=plugin.tw_contacts/file; type=string; label=Path to layout root (FE)
+        layoutRootPath = EXT:tw_contacts/Resources/Private/Layouts/
+    }
+}
