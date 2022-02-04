@@ -11,8 +11,10 @@
 
 namespace Tollwerk\TwContacts\Controller;
 
+use Tollwerk\TwContacts\Domain\Repository\CategoryRepository;
 use Tollwerk\TwContacts\Domain\Repository\ContactRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Frontend\Category\Collection\CategoryCollection;
 
 /**
  * Class ContactController
@@ -29,13 +31,22 @@ class ContactController extends ActionController
     protected ContactRepository $contactRepository;
 
     /**
+     * CategoryRepository
+     *
+     * @var CategoryRepository
+     */
+    protected CategoryRepository $categoryRepository;
+
+    /**
      * Constructor
      *
-     * @param ContactRepository $contactRepository
+     * @param ContactRepository  $contactRepository  The ContactRepository
+     * @param CategoryRepository $categoryRepository The CategoryRepository
      */
-    public function __construct(ContactRepository $contactRepository)
+    public function __construct(ContactRepository $contactRepository, CategoryRepository $categoryRepository)
     {
-        $this->contactRepository = $contactRepository;
+        $this->contactRepository  = $contactRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -43,7 +54,9 @@ class ContactController extends ActionController
      *
      * @param array $filter
      */
-    public function listAction(array $filter = []) {
+    public function listAction(array $filter = [])
+    {
+        $this->view->assign('availableCategories', $this->categoryRepository->findAssigned());
         $this->view->assign('contacts', $this->contactRepository->findAll());
     }
 }
