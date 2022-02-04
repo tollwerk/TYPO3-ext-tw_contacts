@@ -49,12 +49,13 @@ return [
                 --palette--;;role,
                 --palette--;;address,
                 --palette--;;latLon,
-            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, --palette--;;timeRestriction'
+            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories, categories,
+            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, --palette--;;timeRestriction',
         ],
     ],
     'columns'   => [
         // System
-        'hidden' => [
+        'hidden'        => [
             'exclude' => true,
             'label'   => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.enabled',
             'config'  => [
@@ -68,7 +69,7 @@ return [
                 ],
             ],
         ],
-        'starttime' => [
+        'starttime'     => [
             'exclude' => true,
             'label'   => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config'  => [
@@ -78,7 +79,7 @@ return [
                 'default'    => 0,
             ],
         ],
-        'endtime' => [
+        'endtime'       => [
             'exclude' => true,
             'label'   => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config'  => [
@@ -90,7 +91,7 @@ return [
         ],
 
         // Basic information
-        'gender' => [
+        'gender'        => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.gender',
             'config'  => [
@@ -113,7 +114,7 @@ return [
                 ],
             ],
         ],
-        'title' => [
+        'title'         => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.title',
             'config'  => [
@@ -122,7 +123,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'given_name' => [
+        'given_name'    => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.given_name',
             'config'  => [
@@ -131,7 +132,7 @@ return [
                 'eval' => 'required,trim'
             ],
         ],
-        'family_name'  => [
+        'family_name'   => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.family_name',
             'config'  => [
@@ -140,7 +141,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'full_name' => [
+        'full_name'     => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.full_name',
             'config'  => [
@@ -149,7 +150,7 @@ return [
                 'eval' => 'trim',
             ],
         ],
-        'portrait' => [
+        'portrait'      => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.portrait',
             'config'  => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
@@ -196,7 +197,7 @@ return [
                 $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
             ),
         ],
-        'description' => [
+        'description'   => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.description',
             'config'  => [
@@ -234,7 +235,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'fax' => [
+        'fax'           => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.fax',
             'config'  => [
@@ -243,7 +244,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'email'       => [
+        'email'         => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.email',
             'config'  => [
@@ -263,7 +264,7 @@ return [
         ],
 
         // Address and organization
-        'organization' => [
+        'organization'  => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.organization',
             'config'  => [
@@ -272,7 +273,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'role'         => [
+        'role'          => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.role',
             'config'  => [
@@ -281,7 +282,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'address'     => [
+        'address'       => [
             'exclude' => true,
             'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.address',
             'config'  => [
@@ -290,34 +291,57 @@ return [
                 'rows' => 5,
             ]
         ],
-        'latitude'    => [
+        'latitude'      => [
             'exclude'     => true,
             'label'       => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.latitude',
             'description' => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.latitude.description',
             'config'      => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'null,trim',
+                'type'    => 'input',
+                'size'    => 30,
+                'eval'    => 'null,trim',
                 'default' => null,
             ],
         ],
-        'longitude'   => [
-            'exclude'     => true,
-            'label'       => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.longitude',
-            'description' => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.longitude.decription',
-            'config'      => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'null,trim',
+        'longitude'     => [
+            'exclude' => true,
+            'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.longitude',
+            'config'  => [
+                'type'    => 'input',
+                'size'    => 30,
+                'eval'    => 'null,trim',
                 'default' => null,
             ],
         ],
-        'distance'    => [
+        'distance'      => [
             'config' => [
                 'type' => 'passthrough'
             ],
         ],
+
+        // Misc
+        'categories'    => [
+            'exclude' => true,
+            'label'   => 'LLL:EXT:tw_contacts/Resources/Private/Language/locallang_db.xlf:tx_twcontacts_domain_model_contact.categories',
+            'config'  => [
+                'type'              => 'select',
+                'renderType'        => 'selectTree',
+                'foreign_table'     => 'sys_category',
+                'MM'                => 'sys_category_record_mm',
+                'MM_match_fields'   => [
+                    'fieldname'  => 'categories',
+                    'tablenames' => 'tx_twcontacts_domain_model_contact'
+                ],
+                'MM_opposite_field' => 'items',
+                'size'              => 20,
+                'treeConfig'        => [
+                    'parentField' => 'items',
+                    'appearance'  => [
+                        'expandAll'  => true,
+                        'showHeader' => true,
+                    ],
+                ],
+            ],
+        ],
     ],
 ];
-
 

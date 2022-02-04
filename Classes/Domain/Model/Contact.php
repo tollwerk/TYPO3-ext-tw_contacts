@@ -11,8 +11,10 @@
 
 namespace Tollwerk\TwContacts\Domain\Model;
 
+use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
  * Class Contact
@@ -184,6 +186,27 @@ class Contact extends AbstractEntity
     public function setFamilyName(string $familyName): void
     {
         $this->familyName = $familyName;
+    }
+
+    /**
+     * @var ObjectStorage<Category>
+     */
+    protected ObjectStorage $categories;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categories = new ObjectStorage();
+    }
+
+    /**
+     * Called again with initialize object, as fetching an entity from the DB does not use the constructor
+     */
+    public function initializeObject()
+    {
+        $this->categories = $this->categories ?? new ObjectStorage();
     }
 
     /**
@@ -456,5 +479,41 @@ class Contact extends AbstractEntity
     public function setAddress(string $address): void
     {
         $this->address = $address;
+    }
+
+    /**
+     * Add a single category
+     *
+     * @param Category $category
+     */
+    public function addCategory(Category $category): void
+    {
+        $this->categories->attach($category);
+    }
+
+    /**
+     * Remove a single category
+     *
+     * @param Category $category
+     */
+    public function removeCategory(Category $category): void
+    {
+        $this->categories->detach($category);
+    }
+
+    /**
+     * @return ObjectStorage
+     */
+    public function getCategories(): ObjectStorage
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @param ObjectStorage $categories
+     */
+    public function setCategories(ObjectStorage $categories): void
+    {
+        $this->categories = $categories;
     }
 }

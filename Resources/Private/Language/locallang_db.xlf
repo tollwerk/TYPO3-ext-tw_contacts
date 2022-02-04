@@ -115,6 +115,9 @@
             <trans-unit id="tx_twcontacts_domain_model_contact.organization" approved="yes">
                 <source>Organization</source>
             </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.categories" approved="yes">
+                <source>Categories</source>
+            </trans-unit>
 
 
         </body>

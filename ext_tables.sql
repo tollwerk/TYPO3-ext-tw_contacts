@@ -30,6 +30,10 @@ CREATE TABLE tx_twcontacts_domain_model_contact
     longitude     DECIMAL(19, 16)                 NULL,
     latitude      DECIMAL(19, 16)                 NULL,
 
+    # Misc
+    categories    INT(11)             DEFAULT '0' NOT NULL,
+
+    # Other system fields
     sorting       INT(11)             DEFAULT '0' NOT NULL,
     tstamp        INT(11) UNSIGNED    DEFAULT '0' NOT NULL,
     crdate        INT(11) UNSIGNED    DEFAULT '0' NOT NULL,
