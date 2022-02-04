@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2022-02-04T00:00:00Z" product-name="tw_contacts">
+        <header/>
+        <body>
+            <!-- Basic settings -->
+            <trans-unit id="file" xml:space="preserve">
+				<source>Files &amp; directories</source>
+			</trans-unit>
+            <trans-unit id="file.templateRootPath" xml:space="preserve">
+				<source>Path to template files (FE)</source>
+			</trans-unit>
+            <trans-unit id="file.partialRootPath" xml:space="preserve">
+				<source>Path to template partials (FE)</source>
+			</trans-unit>
+            <trans-unit id="file.layoutRootPath" xml:space="preserve">
+				<source>Path to template layouts (FE)</source>
+			</trans-unit>
+
+            <!-- Contacts -->
+            <trans-unit id="contacts">
+                <source>Contacts</source>
+            </trans-unit>
+            <trans-unit id="list_type.contacts">
+                <source>Contact list</source>
+            </trans-unit>
+            <trans-unit id="contacts.storagePid">
+                <source>Contacts storage page</source>
+            </trans-unit>
+            <trans-unit id="contacts.plugin.list" approved="yes">
+                <source>Contacts list</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact" approved="yes">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.title" approved="yes">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.given_name" approved="yes">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.full_name" approved="no">
+                <source>Full name</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.family_name" approved="yes">
+                <source>Family name</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.gender" approved="no">
+                <source>Gender</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.gender.1" approved="no">
+                <source>Male</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.gender.2" approved="no">
+                <source>Female</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.portrait" approved="yes">
+                <source>Portrait</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.phone" approved="yes">
+                <source>Phone (Work)</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.phone_private" approved="yes">
+                <source>Phone (private)</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.phone_mobile" approved="yes">
+                <source>Phone (mobile)</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.fax" approved="yes">
+                <source>Fax</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.email" approved="yes">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.website" approved="yes">
+                <source>Website</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.sorting" approved="yes">
+                <source>Sorting</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.role" approved="yes">
+                <source>Role</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.description" approved="yes">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.is_address" approved="yes">
+                <source>Is an address</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.address" approved="yes">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.latitude" approved="yes">
+                <source>Latitude</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.longitude" approved="yes">
+                <source>Longitude</source>
+            </trans-unit>
+            <trans-unit id="tx_twcontacts_domain_model_contact.organization" approved="yes">
+                <source>Organization</source>
+            </trans-unit>
+
+
+        </body>
+    </file>
+</xliff>

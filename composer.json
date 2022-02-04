@@ -26,12 +26,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Tollwerk\\TwContact\\": "Classes/"
+      "Tollwerk\\TwContacts\\": "Classes/"
     }
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "tw_contacts",
+      "extension-key": "tw_contacts"
     }
   }
 }
