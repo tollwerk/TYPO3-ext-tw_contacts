@@ -1,0 +1,37 @@
+{
+  "name": "tollwerk/tw-contacts",
+  "type": "typo3-cms-extension",
+  "description": "Manage, search and list contact persons.",
+  "authors": [
+    {
+      "name": "Klaus Fiedler",
+      "email": "klaus@tollwerk.de",
+      "role": "Developer",
+      "homepage": "https://tollwerk.de"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^11.4",
+    "typo3/cms-fluid-styled-content": "^11.4"
+  },
+  "homepage": "https://github.com/kftw/tw_contacts",
+  "license": "MIT",
+  "keywords": [
+    "typo3",
+    "contacts",
+    "tollwerk"
+  ],
+  "support": {
+    "issues": "https://github.com/kftw/tw_contacts/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tollwerk\\TwContact\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "tw_contacts",
+    }
+  }
+}
