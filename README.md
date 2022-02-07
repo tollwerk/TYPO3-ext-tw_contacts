@@ -1,4 +1,4 @@
-# TYPO3 Extension tw_contacts
+# tollwerk contacts extension for TYPO3
 
 Manage contact persons and show them on the TYPO3 frontend.
 
