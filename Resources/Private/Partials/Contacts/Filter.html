@@ -1,4 +1,42 @@
-<f:form action="list" controller="Contact" pluginName="Contacts" extensionName="TwContacts">
+<f:form class="ContactsFilter" action="list" controller="Contact" pluginName="Contacts" extensionName="TwContacts" section="contacts">
+    <f:comment><!-- Sort --></f:comment>
+    <label class="ContactsFilter__label" for="contacts-sort">
+        {f:translate(key: 'contactsFilter.sort')}
+    </label>
+    <f:form.select id="contacts-sort" name="sort">
+        <f:form.select.option value="1" selected="{f:if(condition: '{sort} == 1', then: 1, else: 0)}">
+            {f:translate(key: 'contactsFilter.sort.family_name.asc')}
+        </f:form.select.option>
+        <f:form.select.option value="2" selected="{f:if(condition: '{sort} == 2', then: 1, else: 0)}">
+            {f:translate(key: 'contactsFilter.sort.family_name.desc')}
+        </f:form.select.option>
+    </f:form.select>
 
-    <f:form.textfield name="search" />
+    <f:comment><!-- Categories --></f:comment>
+    <f:if condition="{availableCategories}">
+        <label class="ContactsFilter__label" for="contacts-filter-category">
+            {f:translate(key: 'contactsFilter.filter.category')}
+        </label>
+        <f:form.select id="contacts-filter-category" name="filter[category]">
+            <f:form.select.option value="">
+                {f:translate(key: 'contactsFilter.filter.category.option.empty')}
+            </f:form.select.option>
+            <f:for each="{availableCategories}" as="category">
+                <f:form.select.option value="{category.uid}"
+                                      selected="{f:if(condition: '{category.uid} == {filter.category}', then: 1, else: 0)}">
+                    {category.title}
+                </f:form.select.option>
+            </f:for>
+        </f:form.select>
+    </f:if>
+
+    <f:comment><!-- Search term --></f:comment>
+    <label class="ContactsFilter__label" for="contacts-search">
+        {f:translate(key: 'contactsFilter.search')}
+        <f:form.textfield id="contacts-search" name="search" value="{search}"/>
+    </label>
+
+    <f:comment><!-- Submit form --></f:comment>
+    <f:form.submit value="{f:translate(key: 'contactsFilter.submit')}" name="submit"/>
+
 </f:form>

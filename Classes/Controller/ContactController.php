@@ -14,6 +14,7 @@ namespace Tollwerk\TwContacts\Controller;
 use Tollwerk\TwContacts\Domain\Repository\CategoryRepository;
 use Tollwerk\TwContacts\Domain\Repository\ContactRepository;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Frontend\Category\Collection\CategoryCollection;
 
 /**
@@ -52,11 +53,21 @@ class ContactController extends ActionController
     /**
      * List and filter contacts
      *
-     * @param array $filter
+     * @param array  $filter Filter values
+     * @param string $search Search string
+     * @param int    $sort   Sort. See ContactRepository::SORT_FAMILY_NAME_ASC etc.
      */
-    public function listAction(array $filter = [])
-    {
-        $this->view->assign('availableCategories', $this->categoryRepository->findAssigned());
-        $this->view->assign('contacts', $this->contactRepository->findAll());
+    public function listAction(
+        array $filter = [],
+        string $search = '',
+        int $sort = ContactRepository::SORT_FAMILY_NAME_ASC
+    ) {
+        $this->view->assignMultiple([
+            'sort'                => $sort,
+            'filter'              => $filter,
+            'search'              => $search,
+            'availableCategories' => $this->categoryRepository->findAssigned(),
+            'contacts'            => $this->contactRepository->findByFilterSearch($filter, $search, $sort),
+        ]);
     }
 }

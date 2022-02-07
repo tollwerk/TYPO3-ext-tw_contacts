@@ -40,7 +40,7 @@ class CategoryRepository extends Repository
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
                                       ->getQueryBuilderForTable('sys_category_record_mm');
 
-        $queryBuilder->select('mm.uid_local', 'category.title')
+        $queryBuilder->select('category.uid', 'category.title')
                      ->from('sys_category_record_mm', 'mm')
                      ->innerJoin(
                          'mm',

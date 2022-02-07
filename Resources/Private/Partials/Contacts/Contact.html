@@ -1,0 +1,25 @@
+<div class="Contact" id="contacts">
+    <div class="Contact__portrait">
+        <f:if condition="{contact.portrait}">
+            <f:image image="{contact.portrait}" width="300"/>
+        </f:if>
+    </div>
+    <div class="Contact__name">{contact.givenName} {contact.FamilyName}</div>
+    <f:if condition="{contact.phone} || {contact.email}">
+        <dl class="Contact__contact">
+            <f:if condition="{contact.phone}">
+                <div class="Contact__contact-item Contact__contact-item--phone">
+                    <dt>{f:translate(key: 'contact.phone')}</dt>
+                    <dd><a href="tel:{contact.phone}">{contact.phone}</a></dd>
+                </div>
+            </f:if>
+            <f:if condition="{contact.email}">
+                <div class="Contact__contact-item Contact__contact-item--email">
+                    <dt>{f:translate(key: 'contact.email')}</dt>
+                    <dd><a href="mailto:{contact.email}">{contact.email}</a></dd>
+                </div>
+            </f:if>
+        </dl>
+    </f:if>
+
+</div>

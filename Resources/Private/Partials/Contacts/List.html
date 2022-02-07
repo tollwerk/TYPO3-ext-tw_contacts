@@ -3,12 +3,13 @@
         <ol class="ContactsList">
             <f:for each="{contacts}" as="contact">
                 <li class="ContactsList__item">
-                    {contact.givenName} {contact.familyName}
+                   <f:render partial="Contacts/Contact" arguments="{contact: contact}" />
                 </li>
             </f:for>
         </ol>
     </f:then>
     <f:else>
-        <p>{f:translate(key: 'contactsList.empty')}</p>
+        <p class="ContactsListEmpty">{f:translate(key: 'contactsList.empty')}</p>
     </f:else>
 </f:if>
+

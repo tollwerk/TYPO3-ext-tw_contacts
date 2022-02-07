@@ -6,6 +6,36 @@
             <trans-unit id="contactsList.empty">
                 <source>No records found.</source>
             </trans-unit>
+            <trans-unit id="contactsFilter.sort">
+                <source>Sort</source>
+            </trans-unit>
+            <trans-unit id="contactsFilter.sort.family_name.asc">
+                <source>By family name ascending</source>
+            </trans-unit>
+            <trans-unit id="contactsFilter.sort.family_name.desc">
+                <source>By family name descending</source>
+            </trans-unit>
+            <trans-unit id="contactsFilter.filter.sort">
+                <source>Sort</source>
+            </trans-unit>
+            <trans-unit id="contactsFilter.filter.category">
+                <source>Category</source>
+            </trans-unit>
+            <trans-unit id="contactsFilter.filter.category.option.empty">
+                <source>Select category</source>
+            </trans-unit>
+            <trans-unit id="contactsFilter.search">
+                <source>Search term</source>
+            </trans-unit>
+            <trans-unit id="contactsFilter.submit">
+                <source>Find</source>
+            </trans-unit>
+            <trans-unit id="contact.phone">
+                <source>Phone</source>
+            </trans-unit>
+            <trans-unit id="contact.email">
+                <source>Email</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

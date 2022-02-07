@@ -1,6 +1,4 @@
-<f:debug>{_all}</f:debug>
-
 <div class="Contacts">
-    <f:render partial="Contacts/Filter" />
-    <f:render partial="Contacts/ContactsList" arguments="{contacts: contacts}"/>
+    <f:render partial="Contacts/Filter" arguments="{_all}" />
+    <f:render partial="Contacts/List" arguments="{contacts: contacts}"/>
 </div>
